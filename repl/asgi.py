@@ -1,5 +1,5 @@
 """
-ASGI config for presentaciones project.
+ASGI config for repl project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
