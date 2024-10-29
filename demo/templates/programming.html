@@ -1,0 +1,46 @@
+{% extends 'decks.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section>
+    <h2>Testing Ace.js with PyScript</h2>
+</section>
+
+<section>
+    <h2>What is PyScript?</h2>
+    <p>PyScript is a programming language that allows the execution of Python code in the web browser using modern web technologies such as Pyodide and WASM (Web Assembly). It is designed to be accessible to users of all levels, with many applications due to its connection with Python.</p>
+    <p>More information about PyScript <a href="https://pyscript.net/">here</a>.
+    </p>
+</section>
+
+<section>
+    <h2>What is Ace.js?</h2>
+    <p>Ace is a code editor that can be integrated into web pages using JavaScript. It includes features like syntax highlighting and error marking for over 120 programming languages. It is used in Cloud9 IDE and is the successor to Mozilla’s Skywriter (Bespin) project.</p>
+    <p>More information about Ace.js <a href="https://ace.c9.io/">here</a>.</p>
+</section>
+
+<section>
+    <h2>What is a REPL?</h2>
+    <p>A REPL (Read-Eval-Print Loop) is an interactive environment that allows you to write code, evaluate it, and see the results immediately in the same environment.
+    </p>
+    <p>With Ace.js and PyScript, we can simulate a REPL. What we do is wait for the “Run” button to be pressed to execute the code in the editor as if it were a PyScript script.
+    </p>
+</section>
+
+<section>
+    <section>
+        <h2>PyScript + Ace.js</h2>
+        <p>Important! Only with the "display()" command do results appear on the screen. This is a difference between PyScript and Python.</p>
+        {% include "py-editor.html" with code=example1 id="id1" %}
+    </section>
+
+    <section>
+        <h2>PyScript + Ace.js</h2>
+        <p>For now, we can use the libraries Matplotlib, Pandas, Numpy, and Scipy.</p>
+        {% include "py-editor.html" with code=example2 id="id2" %}
+    </section>
+</section>
+
+{% endblock %}
